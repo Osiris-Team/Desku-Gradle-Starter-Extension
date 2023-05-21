@@ -1,5 +1,5 @@
 # Desku-Gradle-Starter-Extension
-Example starter Desku extension, built with Gradle.
+Example starter [Desku](https://github.com/Osiris-Team/Desku) extension, built with Gradle.
 
 - Preferred directory structure.
 - Usage examples of important methods.
