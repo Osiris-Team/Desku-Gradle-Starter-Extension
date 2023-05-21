@@ -1,0 +1,1 @@
+console.log('This JavaScript code was appended by Comp1.class and will run once the HTML was loaded.')

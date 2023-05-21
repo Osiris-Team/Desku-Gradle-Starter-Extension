@@ -1,0 +1,68 @@
+plugins {
+  id 'java'
+  id 'maven-publish'
+}
+
+repositories {
+  mavenLocal()
+  maven {
+    url = uri('https://jitpack.io')
+  }
+
+  maven {
+    url = uri('https://repo.maven.apache.org/maven2/')
+  }
+}
+
+dependencies {
+  implementation 'com.github.Osiris-Team:Desku:0.9.10'
+
+  testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+}
+
+test {
+  useJUnitPlatform()
+}
+
+group = 'com.author.extension'
+version = '1.0.0'
+description = 'Example Desku extension, built with Gradle.'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+java {
+  withSourcesJar()
+}
+
+
+// Ensure that everything other than classes/.java files are also included in the final jar
+// This should also be included in your project if you want to easily load resources.
+sourceSets {
+  main {
+    resources {
+      srcDirs = ["src/main/java", "src/main/resources"]
+      include '**/*' // Include everything (no .java by default)
+    }
+
+  }
+}
+// This must also be included if you want to generate the sources jar without issues
+tasks.withType(Jar).configureEach { duplicatesStrategy = DuplicatesStrategy.EXCLUDE }
+
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from(components.java)
+    }
+  }
+}
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+wrapper {
+  gradleVersion = "8.1.1"
+  distributionType = Wrapper.DistributionType.ALL
+}
