@@ -1,7 +1,7 @@
 # Desku-Gradle-Starter-Extension
 Example starter [Desku](https://github.com/Osiris-Team/Desku) extension, built with Gradle.
 
-`>>> Supports Desku 0.9.10 and above!`
+`>>> Supports Desku 0.9.10 or higher!`
 
 - Preferred directory structure.
 - Usage examples of important methods.
