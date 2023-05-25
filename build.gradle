@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.Osiris-Team:Desku:0.9.10'
+  implementation 'com.github.Osiris-Team:Desku:0.9.12'
 
   testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 }

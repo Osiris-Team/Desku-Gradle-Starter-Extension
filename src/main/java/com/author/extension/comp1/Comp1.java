@@ -26,7 +26,7 @@ public class Comp1 extends Component<Comp1> {
     }
 
     public Comp1() {
-        init(this, "comp1");
+        super("comp1");
         // Make sure to call init before anything else!
 
         // You can get the window this component is loaded in, like so:
