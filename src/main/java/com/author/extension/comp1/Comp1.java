@@ -1,11 +1,14 @@
 package com.author.extension.comp1;
 
 import com.osiris.desku.App;
-import com.osiris.desku.UI;
+import com.osiris.desku.ui.UI;
 import com.osiris.desku.ui.Component;
 import com.osiris.desku.ui.display.Image;
 
-public class Comp1 extends Component<Comp1> {
+// param1: ref to its own type (see _this), param2: value/data this component represents in the UI,
+// which will be converted to json and set as value attribute in the frontend, use NoValue if this
+// component is only visual.
+public class Comp1 extends Component<Comp1, String> {
 
     static { // Executed only once
         try {
@@ -16,17 +19,18 @@ public class Comp1 extends Component<Comp1> {
             // You can also add a css file to the current classes' package/folder.
             // The file below is at "com/osiris/desku/VerticalLayout.css"
             styles = App.getCSS(Comp1.class);
-            App.appendToGlobalStyles(styles);
+            App.appendToGlobalCSS(styles);
 
             // Execute JavaScript code globally once the HTML is loaded.
-            //TODO App.appendToGlobalJS(App.getJS(Comp1.class));
+            // Useful for adding dependencies/libraries
+            App.appendToGlobalJS(App.getJS(Comp1.class));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
     public Comp1() {
-        super("comp1");
+        super("default-value", "comp1"); // default value and html tag
         // Make sure to call init before anything else!
 
         // You can get the window this component is loaded in, like so:

@@ -5,17 +5,12 @@ plugins {
 
 repositories {
   mavenLocal()
-  maven {
-    url = uri('https://jitpack.io')
-  }
-
-  maven {
-    url = uri('https://repo.maven.apache.org/maven2/')
-  }
+  mavenCentral()
+  maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-  implementation 'com.github.Osiris-Team:Desku:0.9.12'
+  implementation 'com.github.Osiris-Team:Desku:1.0.7'
 
   testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
 }
@@ -27,8 +22,8 @@ test {
 group = 'com.author.extension'
 version = '1.0.0'
 description = 'Example Desku extension, built with Gradle.'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 java {
   withSourcesJar()
