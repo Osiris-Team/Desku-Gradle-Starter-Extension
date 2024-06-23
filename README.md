@@ -1,5 +1,7 @@
-# Desku-Gradle-Starter-Extension
+# Desku-Gradle-Starter-Extension [![](https://jitpack.io/v/Osiris-Team/Desku-Gradle-Starter-Extension.svg)](https://jitpack.io/#Osiris-Team/Desku-Gradle-Starter-Extension)
 Example starter [Desku](https://github.com/Osiris-Team/Desku) extension, built with Gradle.
+
+[Click here for Maven/Gradle/Sbt/Leinigen instructions](https://jitpack.io/#Osiris-Team/Desku-Gradle-Starter-Extension/LATEST) (Java 11 or higher required).
 
 `>>> Supports Desku 1.0.0 or higher!`
 
