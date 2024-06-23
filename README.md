@@ -9,6 +9,7 @@ Example starter [Desku](https://github.com/Osiris-Team/Desku) extension, built w
 - Preferred directory structure.
 - Usage examples of important methods.
 - `build.gradle` file that includes files other than .java source code.
+- Effortless publishing via Jitpack (simply update your author/repo-name in this readme).
 
 #### Important
 Optimally your extension only uses the **App, UI and Component**
