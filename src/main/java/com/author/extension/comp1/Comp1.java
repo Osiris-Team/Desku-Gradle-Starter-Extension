@@ -30,7 +30,7 @@ public class Comp1 extends Component<Comp1, String> {
     }
 
     public Comp1() {
-        super("default-value", "comp1"); // default value and html tag
+        super("default-value", String.class, "comp1"); // default value and html tag
         // Make sure to call init before anything else!
 
         // You can get the window this component is loaded in, like so:
